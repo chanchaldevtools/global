@@ -19,7 +19,7 @@ const Header = () => {
                     <div className="col-6">
                         <FetchLocationData />
                     </div>
-                    <div className="col-6 text-right">
+                    <div className="col-6 text-center">
                         <GoogleTranslate />
                     </div>
                 </div>

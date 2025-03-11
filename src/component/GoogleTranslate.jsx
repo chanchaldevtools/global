@@ -114,7 +114,7 @@ const GoogleTranslate = () => {
   @media only screen and (max-width: 770px) {
     select.goog-te-combo {
       border-radius: 0px !important;
-      width: 80% !important;
+      width: 100% !important;
       margin: 0 !important;
       padding: 10px 0px !important;
     }
@@ -124,7 +124,7 @@ const GoogleTranslate = () => {
   }
     @media only screen and (max-width: 550px) {
       .goog-te-gadget .goog-te-combo {
-            margin: 4px 0px 4px 0px !important;
+            margin: 1px 0px 4px 0px !important;
         }
       }
 `}</style>

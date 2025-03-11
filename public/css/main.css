@@ -18298,7 +18298,8 @@ a img.aligncenter {
 @media(max-width:767px) {
     .page_header a.logo img {
         height: 75px;
-        min-width: 150px
+        min-width: 150px;
+        object-fit: contain;
     }
 }
 
@@ -24299,6 +24300,27 @@ a.btn_001 {
     color: white;
     padding: 14px;
 }
+
+
+@media only screen and (max-width: 770px) {
+    header.page_header.ls.justify-nav-center {
+        padding: 0px 30px;
+    }
+    section.top-bar {
+        padding: 0px 30px !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

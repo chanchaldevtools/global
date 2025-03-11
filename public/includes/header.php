@@ -11,21 +11,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
 							<div class="col-12 col-md-4 col-xl-4">
 								<div class="media">
 									<div class="media-body">
-										<a href="index.php" class="logo">
+										<a href="" class="logo">
 											<img src="images/logo1-white.png" alt="img" class="nav-upper-header1">
 										</a>
 									</div>
 								</div>
 							</div>
-							<!-- <div class="col-md-4 text-center hidden-below-md">
-								
-							</div>
-							<div class="col-12 col-md-4 col-xl-4">
-								<div class="media">
-									
-
-								</div>
-							</div> -->
 						</div>
 					</div>
 				</section>
