@@ -882,7 +882,7 @@ select,
     border: none;
     border-radius: 0;
     color: #585149;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     height: 50px;
     line-height: 24px;
@@ -956,7 +956,7 @@ select:active,
 
 select {
     border: none;
-    font-style: italic;
+   
     font-weight: 600;
     height: 50px;
     text-transform: uppercase;

@@ -48,9 +48,9 @@ const GoogleTranslate = () => {
   }
   .goog-te-gadget {
     color: transparent !important;
-    font-family: 'Montserrat';
-    font-size: 14px;
-    font-weight: 500;
+   
+    font-size: 11px !important;
+    
     white-space: nowrap;
     height: 0px !important;
   }
@@ -58,7 +58,7 @@ const GoogleTranslate = () => {
     color: #ffffff !important;
     font-size: 12px !important;
     line-height: 1.5; /* Adjusts the spacing between items */
-    font-family: 'Montserrat';
+    
     font-weight: 500;
     padding: 7px 10px;
     background: transparent;
@@ -83,23 +83,22 @@ const GoogleTranslate = () => {
   }
   select {
     border: none;
-    font-style: italic;
+   
     font-weight: 600;
     height: auto;
     width: 100%;
   }
-  .goog-te-gadget .goog-te-combo {
-    margin: 18px 0px 4px 0px;
-    padding: 7px 0px;
-    background: transparent;
-  }
+      .goog-te-gadget .goog-te-combo {
+        margin: 3px 0px 4px 0px !important;
+        font-size: 11px !important;
+    }
   .goog-te-combo option {
     padding: 10px; /* Adds spacing between dropdown options */
   }
   .select_container::after {
     color: #fff;
     content: "";
-    font-family: FontAwesome;
+   
     font-size: 10px;
     position: absolute;
     right: 19px;
