@@ -123,7 +123,7 @@ const GoogleTranslate = () => {
   }
     @media only screen and (max-width: 550px) {
       .goog-te-gadget .goog-te-combo {
-            margin: 1px 0px 4px 0px !important;
+            margin: 3px 0px 4px 0px !important;
         }
       }
 `}</style>
