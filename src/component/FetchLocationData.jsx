@@ -30,8 +30,8 @@ const FetchLocationData = () => {
   
 
   return (
-    <div className="row">
-      <div className="d-flex  flex-row ">
+    <div className="row align-items-center">
+      <div className="d-flex  flex-row align-items-center">
         {/* Assuming you have a valid country flag URL or it's passed dynamically */}
         <img
           className="imageContainer small"

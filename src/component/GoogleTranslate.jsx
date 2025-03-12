@@ -89,7 +89,7 @@ const GoogleTranslate = () => {
     width: 100%;
   }
       .goog-te-gadget .goog-te-combo {
-        margin: 3px 0px 4px 0px !important;
+        margin: 9px 0px 4px 0px !important;
         font-size: 11px !important;
     }
   .goog-te-combo option {

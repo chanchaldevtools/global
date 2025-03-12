@@ -357,7 +357,7 @@ section.top-bar {
   padding: 0 1%;
 }
 img.imageContainer.small {
-  width: 22%;
+  width: 50px;
     padding: 10px;
     margin-left: 10px;
 }
@@ -368,7 +368,11 @@ img.imageContainer.small {
   font-weight: 500;
 }
 
-
+@media only screen and (max-width: 770px) {
+  img.imageContainer.small {
+    width: 22%;
+  }
+}
 
 
 
