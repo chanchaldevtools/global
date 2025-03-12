@@ -31,14 +31,14 @@ const FetchLocationData = () => {
 
   return (
     <div className="row">
-      <div className="d-flex justify-content-center flex-row align-items-center">
+      <div className="d-flex  flex-row ">
         {/* Assuming you have a valid country flag URL or it's passed dynamically */}
         <img
           className="imageContainer small"
           src={`https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/${locationData?.countryCode?.toLowerCase()}.svg`}
           alt="Country Flag"
         />
-        <p className="flag-text">{locationData?.country}</p>
+        <p className="flag-text">Contact Enroller</p>
       </div>
     </div>
   );
