@@ -22,25 +22,24 @@ const Banner = () => {
     const initializeSlider = () => {
         if (window.$ && window.$().flexslider) {
             const $ = window.$;
-
+    
             const $introSlider = $(".page_slider .flexslider");
-
+    
             $introSlider.each(function () {
                 const $currentSlider = $(this);
-
+    
                 if ($currentSlider.data('flexslider')) {
                     $currentSlider.flexslider('destroy');
                 }
-
+    
                 const data = $currentSlider.data();
                 const nav = data.nav !== undefined ? data.nav : true;
                 const dots = data.dots !== undefined ? data.dots : true;
-                const speed = data.speed !== undefined ? data.speed : 7000;
-
+    
+                // Initialize FlexSlider without autoPlay
                 $currentSlider.flexslider({
                     video: true,
-                    auto: true,
-                    autoPlay: true,
+                    auto: false, // Disable autoPlay
                     animation: "fade",
                     pauseOnHover: true,
                     useCSS: true,
@@ -49,26 +48,40 @@ const Banner = () => {
                     prevText: "",
                     nextText: "",
                     smoothHeight: false,
-                    slideshowSpeed: speed,
-                    animationSpeed: 600,
-                    start: () => {
+                    
+                    start: (slider) => {
                         // Reapply background images for all slides
                         $currentSlider.find(".slides li").each(function () {
                             const $slide = $(this);
                             const backgroundImage = $slide.find("img").attr("src");
-
+    
                             if (backgroundImage) {
                                 $slide.css("background-image", `url(${backgroundImage})`);
                                 $slide.css("background-size", "cover");
                                 $slide.css("background-position", "center");
                             }
                         });
+    
+                        // Custom timing for slide transitions
+                        const slideTimings = [37000, 6000, 6000]; // 37s, 6s, 6s
+                        let currentSlideIndex = 0;
+    
+                        const transitionToNextSlide = () => {
+                            const nextSlideIndex = (currentSlideIndex + 1) % slider.count;
+                            slider.flexAnimate(nextSlideIndex); // Move to the next slide
+                            currentSlideIndex = nextSlideIndex;
+    
+                            // Set timeout for the next slide transition
+                            setTimeout(transitionToNextSlide, slideTimings[currentSlideIndex]);
+                        };
+    
+                        // Start the first transition
+                        setTimeout(transitionToNextSlide, slideTimings[currentSlideIndex]);
                     },
                 });
             });
         }
     };
-
     useEffect(() => {
         initializeSlider();
     }, []); // Reinitialize slider on location change
