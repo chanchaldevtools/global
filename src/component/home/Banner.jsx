@@ -129,7 +129,7 @@ const Banner = () => {
                                             <li className="button-li">
                                                 <a href="#"> Join Now
                                                     <span></span><span></span><span></span><span></span>
-                                                    <i className="fa fa-arrow-right"></i>
+                                                   &nbsp;<i className="fa fa-arrow-right"></i>
                                                 </a>
                                             </li>
                                         </ul>
@@ -211,7 +211,7 @@ const Banner = () => {
                                             <li className="button-li">
                                                 <a href="#"> Join Now
                                                     <span></span><span></span><span></span><span></span>
-                                                    <i className="fa fa-arrow-right"></i>
+                                                    &nbsp;<i className="fa fa-arrow-right"></i>
                                                 </a>
                                             </li>
                                         </ul>

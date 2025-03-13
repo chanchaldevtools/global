@@ -56,7 +56,7 @@ const Home = () => {
 										<li className="button-li">
 											<Link to="/training"> Discover more
 												<span></span><span></span><span></span><span></span>
-												<i className="fa fa-arrow-right"></i>
+												&nbsp;<i className="fa fa-arrow-right"></i>
 											</Link>
 										</li>
 									</ul>
@@ -108,7 +108,7 @@ const Home = () => {
 												<li className="button-li">
 													<a href="javascript:void(0)" className="discover_btn_1"> Submit
 														<span></span><span></span><span></span><span></span>
-														<i className="fa fa-arrow-right"></i>
+														&nbsp;<i className="fa fa-arrow-right"></i>
 													</a>
 												</li>
 											</ul>
@@ -161,7 +161,7 @@ const Home = () => {
 									<li className="button-li">
 										<a href="/social-media"> View all &nbsp;
 											<span></span><span></span><span></span><span></span>
-											<i className="fa fa-arrow-right"></i>
+											&nbsp;<i className="fa fa-arrow-right"></i>
 										</a>
 									</li>
 								</ul>
