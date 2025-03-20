@@ -54,6 +54,8 @@ const GoogleTranslate = () => {
     white-space: nowrap;
     height: 0px !important;
   }
+    #google_translate_element{
+    margin-top: -21px;}
   .goog-te-gadget .goog-te-combo {
     color: #ffffff !important;
     font-size: 12px !important;
@@ -115,10 +117,11 @@ const GoogleTranslate = () => {
       border-radius: 0px !important;
       width: 100% !important;
       margin: 0 !important;
-      padding: 10px 0px !important;
+      padding: 13px 0px !important;
     }
     .goog-te-gadget .goog-te-combo {
             margin: 14px 0px 4px 0px !important;
+            font-size: 10px !important;
         }
   }
     @media only screen and (max-width: 550px) {

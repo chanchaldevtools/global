@@ -26,6 +26,14 @@ const About = () => {
           <div className="container">
             <div className="about_sec1_div_2">
               <div className="row align-items-center">
+              <div className="col-lg-6 col-md-6 col-12">
+                  <div className="about_sec1_div_4">
+                    <img
+                      src="/images/nkimg/about-img-1.jpeg"
+                      className="about_sec1_img_1"
+                    />
+                  </div>
+                </div>
                 <div className="col-lg-6 col-md-6 col-12">
                   <div className="about_sec1_div_3">
                     <p className="about_sec1_p_1">
@@ -37,14 +45,7 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-6 col-12">
-                  <div className="about_sec1_div_4">
-                    <img
-                      src="/images/nkimg/about-img-1.jpeg"
-                      className="about_sec1_img_1"
-                    />
-                  </div>
-                </div>
+               
               </div>
             </div>
           </div>
@@ -193,50 +194,52 @@ const About = () => {
           <div className="container">
             <div className="about_sec1_div_12">
               <div className="row align-items-center">
-                <div className="col-lg-7 col-md-7 col-12">
-                  <div className="about_sec1_div_13">
-                    <p className="about_sec1_p_8">
-                      
-                        Jillian, a visionary leader with an impressive 25-year
-                        executive career, has consistently achieved extraordinary
-                        success in the cooperative network marketing industry. Her
-                        unparalleled ability to launch and scale companies to
-                        multi-million and billion-dollar enterprises has solidified
-                        her reputation as a transformative force in the business
-                        world. Jillian has a proven track record of driving
-                        exponential growth, increasing market share, and
-                        establishing industry-leading brands. Her strategic vision,
-                        coupled with her keen ability to identify and capitalize on
-                        emerging opportunities, has resulted in numerous
-                        groundbreaking initiatives and product launches. Jillian’s
-                        inspiring leadership style fosters a culture of innovation,
-                        teamwork, and excellence, empowering her teams to
-                        consistently surpass expectations and deliver exceptional
-                        results.
-                        <br />
-                        
-                          "At O2 Global we are driven by a shared vision of
-                          excellence and an unwavering commitment to delivering the
-                          highest quality in everything we do. Our goal is not only
-                          to achieve remarkable accomplishments as a company but
-                          also to positively impact the lives of our members,
-                          creating a legacy of success, cherished memories and
-                          lasting relationships."
-                        
-                        – Jillian Corle
-                      
-                    </p>
-                  </div>
-                </div>
                 <div className="col-lg-5 col-md-5 col-12">
                   <div className="about_sec1_div_13">
                     <p className="about_sec1_p_7 text-center">
-                      Jillian Corley
+                    Jillian Corley
                       <br />
                       President
                     </p>
-                    <img src="/images/nkimg/312701717671290.jpg" className="about_sec1_img_1" />
-                    {/* <div className="about_sec1_div_14" /> */}
+                    <img
+                      src="/images/nkimg/312701717671290.jpg"
+                      className="about_sec1_img_1"
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-7 col-md-7 col-12">
+                  <div className="about_sec1_div_13">
+                  <p className="about_sec1_p_8">
+                      
+                      Jillian, a visionary leader with an impressive 25-year
+                      executive career, has consistently achieved extraordinary
+                      success in the cooperative network marketing industry. Her
+                      unparalleled ability to launch and scale companies to
+                      multi-million and billion-dollar enterprises has solidified
+                      her reputation as a transformative force in the business
+                      world. Jillian has a proven track record of driving
+                      exponential growth, increasing market share, and
+                      establishing industry-leading brands. Her strategic vision,
+                      coupled with her keen ability to identify and capitalize on
+                      emerging opportunities, has resulted in numerous
+                      groundbreaking initiatives and product launches. Jillian’s
+                      inspiring leadership style fosters a culture of innovation,
+                      teamwork, and excellence, empowering her teams to
+                      consistently surpass expectations and deliver exceptional
+                      results.
+                      <br />
+                      
+                        "At O2 Global we are driven by a shared vision of
+                        excellence and an unwavering commitment to delivering the
+                        highest quality in everything we do. Our goal is not only
+                        to achieve remarkable accomplishments as a company but
+                        also to positively impact the lives of our members,
+                        creating a legacy of success, cherished memories and
+                        lasting relationships."
+                      
+                      – Jillian Corle
+                    
+                  </p>
                   </div>
                 </div>
               </div>

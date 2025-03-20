@@ -13,19 +13,22 @@ const Header = () => {
     }, [location.pathname]);
 
     return (
-        <div className="header_absolute ds home">
-            <section className='top-bar'>
-                <div className="row">
-                    <div className="col-6">
+        <div className="header_absolute ds home sticky-header ">
+            <section className='top-bar '>
+                <div className="row align-items-center">
+                    <div className=" col-md-5 col-2 text-center">
                         <FetchLocationData />
                     </div>
-                    <div className="col-6 text-center">
+                    <div className="col-md-2 col-5">
+                       <p className='header-p'>Contract Enroller</p>
+                    </div>
+                    <div className="col-md-5 col-5 pr-1 pl-1 text-right">
                         <GoogleTranslate />
                     </div>
                 </div>
             </section>
 
-            <section className="page_topline ds">
+            {/* <section className="page_topline ds">
                 <div className="container-fluid">
                     <div className="row align-items-center">
                         <div className="col-12 col-md-4 col-xl-4 p-0">
@@ -39,10 +42,10 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Header with dynamic class */}
-            <header className={`page_header ls justify-nav-center ${menuOpen ? 'mobile-active' : ''}`}>
+            <header className={`page_header ls justify-nav-center  ${menuOpen ? 'mobile-active' : ''}`}>
                 <div className="container-fluid">
                     <div className="row align-items-lg-end align-items-center">
                         <div className="col-2 col-lg-2 col-md-2 p-0">

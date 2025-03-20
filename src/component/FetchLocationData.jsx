@@ -27,18 +27,18 @@ const FetchLocationData = () => {
       });
   }, []); // Empty dependency array means it runs once when the component mounts
 
-  
+  console.log(locationData);
 
   return (
     <div className="row align-items-center">
-      <div className="d-flex  flex-row align-items-center">
+      <div className="d-flex  flex-row align-items-center justify-content-center">
         {/* Assuming you have a valid country flag URL or it's passed dynamically */}
         <img
           className="imageContainer small"
           src={`https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/${locationData?.countryCode?.toLowerCase()}.svg`}
           alt="Country Flag"
         />
-        <p className="flag-text">Contact Enroller</p>
+        <p className="flag-text">{locationData?.country}</p>
       </div>
     </div>
   );

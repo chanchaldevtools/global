@@ -8,6 +8,16 @@ html {
     width: 100%
 }
 
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it's above other content */
+    background-color: white; /* Adjust as needed */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
 ::-moz-selection {
     background-color: #166db6;
     color: #fff
@@ -21503,6 +21513,9 @@ section .section-heading .back {
     top: -47px;
     z-index: -1
 }
+.ros-align{
+    align-items: center;
+}
 
 @media(max-width:991px) {
     section .section-heading {
@@ -21530,6 +21543,9 @@ section .section-heading .back {
         padding: 26px 0 8px 0 !important;
 
     }
+    .header-p{
+        line-height: 16px;
+    }
     .email_input_1 {
         font-size: 14px;
         height: 40px;
@@ -21556,6 +21572,14 @@ section .section-heading .back {
     .button .button-li {
         font-size: 12px !important;
     }
+    .header-p {
+        font-size: 12px !important;
+        line-height: 15px !important;
+        margin: 0 !important;
+        text-align: end;
+    }
+
+   
 
     .ds p {
         color: #fff;
@@ -21563,6 +21587,9 @@ section .section-heading .back {
         line-height: 25px;
         margin-bottom: 7px;
         margin-top: 7px;
+    }
+    header-flag-img {
+        width: 31px;
     }
 
 }
@@ -23098,8 +23125,24 @@ section .section-heading .back {
 }
 
 .logo-color {
-    display: none !important;
+    /* display: none !important; */
     /*margin-left: 50px;*/
+}
+.header-flag-img{
+    width: 35px;
+    padding: 11px 0;
+}
+.header-p{
+    margin-left: 10px;
+}
+.header-d-flex{
+    display: flex;
+    align-items: center;
+}
+.header-d-flex2{
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
 .boxed .page_header,
@@ -23924,7 +23967,7 @@ about_main_area {
 }
 
 .about_sec1_p_2 {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 600;
     color: #1b6db5;
 }
@@ -24310,8 +24353,10 @@ a.btn_001 {
         padding: 0px 30px 0px 15px !important;
     }
     img.imageContainer.small {
-        margin-right: 25px;
+        margin-right: 5px !important;
         margin-left: 0 !important;
+        /* width:  !important; */
+        padding: 0 !important;
     }
 }
 

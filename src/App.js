@@ -10,6 +10,7 @@ import Contact from "./page/Contact";
 import Social from "./page/Social";
 import Terms from "./page/Terms";
 import Privacy from "./page/Privacy";
+import NotFound from "./page/Notfound";
 
 
 
@@ -59,6 +60,10 @@ function App() {
         {
           path: '/privacy-policy',
           element: <Privacy/>,
+        },
+        {
+          path: '*',
+          element: <NotFound/>,
         }
         
         

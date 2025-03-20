@@ -6,7 +6,6 @@ const Home = () => {
   return (
     <>
  <Banner/>
-
 			<section>
 				<div className="sndsection_div_1 mt-5 mb-5">
 					<img src="/images/nkimg/Opportunity.jpeg" className="sndsection_img_1"/>
