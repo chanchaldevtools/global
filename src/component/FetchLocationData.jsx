@@ -27,7 +27,7 @@ const FetchLocationData = () => {
       });
   }, []); // Empty dependency array means it runs once when the component mounts
 
-  console.log(locationData);
+  
 
   return (
     <div className="row align-items-center">

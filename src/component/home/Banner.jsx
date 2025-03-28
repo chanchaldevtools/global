@@ -2,21 +2,21 @@ import React, { useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom';
 
 const Banner = () => {
-    const videoRef = useRef(null);  // Reference to the video element
-    const playButtonRef = useRef(null);  // Reference to the play/pause button
+    const videoRef = useRef(null);  
+    const playButtonRef = useRef(null);  
 
     const togglePlayPause = () => {
         const video = videoRef.current;
         if (video.paused) {
             video.play();
-            video.classList.add('video-begin');  // Add the video-begin class when the video plays
-            playButtonRef.current.querySelector("i.fa-play").style.display = "none";  // Hide play icon
-            playButtonRef.current.querySelector("i.fa-pause").style.display = "inline";  // Show pause icon
+            video.classList.add('video-begin');  
+            playButtonRef.current.querySelector("i.fa-play").style.display = "none";  
+            playButtonRef.current.querySelector("i.fa-pause").style.display = "inline"; 
         } else {
             video.pause();
-            video.classList.remove('video-begin');  // Remove the video-begin class when the video is paused
-            playButtonRef.current.querySelector("i.fa-play").style.display = "inline";  // Show play icon
-            playButtonRef.current.querySelector("i.fa-pause").style.display = "none";  // Hide pause icon
+            video.classList.remove('video-begin');  
+            playButtonRef.current.querySelector("i.fa-play").style.display = "inline";  
+            playButtonRef.current.querySelector("i.fa-pause").style.display = "none"; 
         }
     };
     const initializeSlider = () => {
@@ -36,10 +36,9 @@ const Banner = () => {
                 const nav = data.nav !== undefined ? data.nav : true;
                 const dots = data.dots !== undefined ? data.dots : true;
     
-                // Initialize FlexSlider without autoPlay
                 $currentSlider.flexslider({
                     video: true,
-                    auto: false, // Disable autoPlay
+                    auto: false, 
                     animation: "fade",
                     pauseOnHover: true,
                     useCSS: true,
@@ -49,42 +48,45 @@ const Banner = () => {
                     nextText: "",
                     smoothHeight: false,
                     
-                    start: (slider) => {
-                        // Reapply background images for all slides
-                        $currentSlider.find(".slides li").each(function () {
-                            const $slide = $(this);
-                            const backgroundImage = $slide.find("img").attr("src");
-    
-                            if (backgroundImage) {
-                                $slide.css("background-image", `url(${backgroundImage})`);
-                                $slide.css("background-size", "cover");
-                                $slide.css("background-position", "center");
-                            }
-                        });
-    
-                        // Custom timing for slide transitions
-                        const slideTimings = [37000, 6000, 6000]; // 37s, 6s, 6s
-                        let currentSlideIndex = 0;
-    
-                        const transitionToNextSlide = () => {
-                            const nextSlideIndex = (currentSlideIndex + 1) % slider.count;
-                            slider.flexAnimate(nextSlideIndex); // Move to the next slide
-                            currentSlideIndex = nextSlideIndex;
-    
-                            // Set timeout for the next slide transition
-                            setTimeout(transitionToNextSlide, slideTimings[currentSlideIndex]);
-                        };
-    
-                        // Start the first transition
-                        setTimeout(transitionToNextSlide, slideTimings[currentSlideIndex]);
-                    },
+                    slideshow: false,
                 });
             });
         }
     };
     useEffect(() => {
         initializeSlider();
-    }, []); // Reinitialize slider on location change
+    }, []); 
+
+
+    useEffect(() => {
+        let timeoutId;
+        const navOrder = [1, 2, 3]; // Click order: 1 → 2 → 3 → 1 → ...
+        const delays = [37000, 6000, 6000]; // 37s, 6s, 6s
+        let currentIndex = 0;
+    
+        const clickNextNav = () => {
+            const navIndex = navOrder[currentIndex];
+            const delay = delays[currentIndex];
+    
+            // Find and click the nav dot
+            const navDot = document.querySelector(`.flex-control-nav li:nth-child(${navIndex}) a`);
+            if (navDot) {
+                navDot.click();
+              
+            }
+    
+            // Schedule next click
+            timeoutId = setTimeout(() => {
+                currentIndex = (currentIndex + 1) % navOrder.length; // Cycle 0→1→2→0→1→2...
+                clickNextNav(); // Repeat
+            }, delay);
+        };
+    
+        clickNextNav(); // Start the sequence
+    
+        // Cleanup
+        return () => clearTimeout(timeoutId);
+    }, []);
 
   return (
     <section className="page_slider">
