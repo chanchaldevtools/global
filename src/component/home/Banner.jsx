@@ -61,14 +61,13 @@ const Banner = () => {
     useEffect(() => {
         let timeoutId;
         const navOrder = [1, 2, 3]; // Click order: 1 → 2 → 3 → 1 → ...
-        const delays = [37000, 6000, 6000]; // 37s, 6s, 6s
+        const delays = [37000, 7000, 7000]; // 37s, 6s, 6s
         let currentIndex = 0;
     
         const clickNextNav = () => {
             const navIndex = navOrder[currentIndex];
             const delay = delays[currentIndex];
     
-            // Find and click the nav dot
             const navDot = document.querySelector(`.flex-control-nav li:nth-child(${navIndex}) a`);
             if (navDot) {
                 navDot.click();
