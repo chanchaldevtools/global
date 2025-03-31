@@ -61,7 +61,7 @@ const Banner = () => {
     useEffect(() => {
         let timeoutId;
         const navOrder = [1, 2, 3]; // Click order: 1 → 2 → 3 → 1 → ...
-        const delays = [37000, 7000, 7000]; // 37s, 6s, 6s
+        const delays = [38000, 7000, 7000]; // 37s, 6s, 6s
         let currentIndex = 0;
     
         const clickNextNav = () => {
