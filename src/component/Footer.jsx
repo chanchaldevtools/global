@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-sm-6 col-md-6 col-lg-4">
                             <div className="footer_div_1">
-                                <Link to="/"><img src="images/logo2.jpg" alt="Logo" className="footer_logo" /></Link>
+                                <Link to="/"><img src="images/o2_logo.png" alt="Logo" className="footer_logo" /></Link>
 
                                 <p className="footer_p_1 footer-boder">We offer products to enhance lives and help start your own
                                     business. Come join us to turn your dreams into reality.</p>
@@ -34,29 +34,29 @@ const Footer = () => {
                                         </Link>
                                     </li>
                                     <li className="footer_usa_li share-icon">
-                                        <img src="https://inextwebs.com/o2globaltravel/public/frontend/images/nkimg/Flag_of_the_United_States.png" alt="Logo" className="footer_logo1" />
+                                        <img src="images/nkimg/Flag_of_the_United_States.png" alt="Logo" className="footer_logo1" />
                                     </li>
                                 </ul>
                                 <div className="footer-logo-icon ">
                                     <ul className="footer-logo-icon-ul">
                                         <li className="footer-logo-icon-li">
                                             <Link to="#" className="footer-logo-icon-a">
-                                                <img src="https://inextwebs.com/o2globaltravel/public/frontend/images/nkimg/visa.png" className="footer-logo-icon-img" />
+                                                <img src="images/nkimg/visa.png" className="footer-logo-icon-img" />
                                             </Link>
                                         </li>
                                         <li className="footer-logo-icon-li">
                                             <Link to="#" className="footer-logo-icon-a">
-                                                <img src="https://inextwebs.com/o2globaltravel/public/frontend/images/nkimg/business.png" className="footer-logo-icon-img" />
+                                                <img src="images/nkimg/business.png" className="footer-logo-icon-img" />
                                             </Link>
                                         </li>
                                         <li className="footer-logo-icon-li">
                                             <Link to="#" className="footer-logo-icon-a">
-                                                <img src="https://inextwebs.com/o2globaltravel/public/frontend/images/nkimg/discover.png" className="footer-logo-icon-img" />
+                                                <img src="images/nkimg/discover.png" className="footer-logo-icon-img" />
                                             </Link>
                                         </li>
                                         <li className="footer-logo-icon-li">
                                             <Link to="#" className="footer-logo-icon-a">
-                                                <img src="https://inextwebs.com/o2globaltravel/public/frontend/images/nkimg/american-express.png" className="footer-logo-icon-img" />
+                                                <img src="images/nkimg/american-express.png" className="footer-logo-icon-img" />
                                             </Link>
                                         </li>
                                     </ul>

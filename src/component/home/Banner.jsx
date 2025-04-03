@@ -22,20 +22,15 @@ const Banner = () => {
     const initializeSlider = () => {
         if (window.$ && window.$().flexslider) {
             const $ = window.$;
-    
             const $introSlider = $(".page_slider .flexslider");
-    
             $introSlider.each(function () {
                 const $currentSlider = $(this);
-    
                 if ($currentSlider.data('flexslider')) {
                     $currentSlider.flexslider('destroy');
                 }
-    
                 const data = $currentSlider.data();
                 const nav = data.nav !== undefined ? data.nav : true;
                 const dots = data.dots !== undefined ? data.dots : true;
-    
                 $currentSlider.flexslider({
                     video: true,
                     auto: false, 
@@ -47,7 +42,6 @@ const Banner = () => {
                     prevText: "",
                     nextText: "",
                     smoothHeight: false,
-                    
                     slideshow: false,
                 });
             });
