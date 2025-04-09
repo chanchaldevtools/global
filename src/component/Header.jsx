@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
         <div className="header_absolute ds home sticky-header ">
-            <section className='top-bar '>
+            {/* <section className='top-bar '>
                 <div className="row align-items-center">
                     <div className=" col-md-5 col-2 text-center">
                         <FetchLocationData />
@@ -26,7 +26,23 @@ const Header = () => {
                         <GoogleTranslate />
                     </div>
                 </div>
-            </section>
+            </section> */}
+            <div className="sub_header">
+                <div className="sub_header_div_padding">
+                    <div className="sub_header_div_1">
+                        <div className="sub_header_div_1_inner">
+                        <FetchLocationData />
+                            {/* <p className="sub_header_div_1_p">United States</p> */}
+                        </div>
+                    </div>
+                    <div class="sub_header_div_2">
+                        <p className="sub_header_div_1_p">Contract Enroller</p>
+                    </div>
+                    <div className="sub_header_div_3">
+                        <GoogleTranslate />
+                    </div>
+                </div>
+            </div>
 
             {/* <section className="page_topline ds">
                 <div className="container-fluid">

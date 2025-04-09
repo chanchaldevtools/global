@@ -24359,6 +24359,67 @@ a.btn_001 {
         padding: 0 !important;
     }
 }
+.sub_header_div_1_img {
+    width: 20px;
+    height: auto;
+}
+.sub_header {
+    background: #030f62;
+
+}
+.sub_header_div_padding{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.sub_header_div_1 {
+    color: white;
+    width: 33%;
+}
+.sub_header_div_2 {
+    color: white;
+    width: 33%;
+    text-align: end;
+}
+.sub_header_div_3 {
+    color: white;
+    width: 33%;
+    text-align: end;
+    margin-top: -30px;
+}
+.sub_header_div_1_inner {
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+}
+.sub_header_div_1_img {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+}
+.goog-te-combo {
+    background: no-repeat;
+    color: white;
+    border: none;
+}
+.sub_header_div_1_p {
+    margin: 2px 0 !important;
+}
+@media screen and (max-width: 500px){
+    .sub_header_div_padding {
+        padding: 10px 5px;
+    }
+    .sub_header_div_2 {
+        text-align: center;
+    }
+    .sub_header_div_1_p {
+        font-size: 12px;
+    }
+    .goog-te-combo{
+         font-size: 12px;
+    }
+}
 
 
 

@@ -370,7 +370,7 @@ img.imageContainer.small {
 
 @media only screen and (max-width: 770px) {
   img.imageContainer.small {
-    width: 22%;
+    width: 15%;
   }
   
 }
