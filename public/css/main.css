@@ -19583,7 +19583,7 @@ body.active-side-header.slide-right .page_header_side {
     }
 
     section .section-heading2 {
-        font-size: 21px !importan;
+        font-size: 21px !important;
     }
 }
 
@@ -23236,7 +23236,7 @@ section .section-heading .back {
 
 .about-us-left {
     padding: 30px 23px 23px 30px;
-    background: #ffffff4d;
+    background: #ffffffad;
 }
 
 .media-icon i {
@@ -23811,6 +23811,9 @@ section .section-heading .back {
     .how_work_area {
         margin: 25px 0;
     }
+    .page_slider .home_slider .intro_layers h2 {
+        margin-top: 75px;
+    }
     
 }
 
@@ -23964,6 +23967,7 @@ about_main_area {
     color: black;
     font-size: 16px;
     font-weight: 500;
+    text-align: justify;
 }
 
 .about_sec1_p_2 {
@@ -24317,6 +24321,9 @@ a.btn_001 {
     }
     .section-heading {
         margin-bottom: 10px !important;
+    }
+    .about_sec1_div_8 {
+        height: 475px;
     }
 }
 

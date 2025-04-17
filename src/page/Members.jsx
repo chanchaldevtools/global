@@ -1,12 +1,27 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react'
 
 const Members = () => {
     const [show, setShow] = useState(false);
 
     const handleClick = () => {
-      setShow((prevShow) => !prevShow); // Toggle the show state
+        setShow((prevShow) => !prevShow);
     };
+    const [showMore, setShowMore] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
+
+    const toggleReadMore = () => setShowMore(prev => !prev);
+
+    useEffect(() => {
+        const checkTablet = () => {
+            setIsTablet(window.innerWidth >= 768 && window.innerWidth <= 1024);
+        };
+
+        checkTablet();
+        window.addEventListener('resize', checkTablet);
+        return () => window.removeEventListener('resize', checkTablet);
+    }, []);
     return (
         <div>
             <div className="header_absolute cover-background ds s-overlay s-parallax">
@@ -18,7 +33,7 @@ const Members = () => {
                                 <h1 className="bold">Membership </h1>
                                 <ol className="breadcrumb">
                                     <li className="breadcrumb-item">
-                                    <Link to="/">Home</Link>
+                                        <Link to="/">Home</Link>
                                     </li>
                                     <li className="breadcrumb-item active">Membership</li>
                                 </ol>
@@ -37,7 +52,26 @@ const Members = () => {
                                         Unlock a World of Adventure and Savings with Our Travel Subscription
                                     </p>
                                     <p className="membership_p_3">
-                                        Are you passionate about exploring new destinations, discovering hidden gems, and creating unforgettable memories? Our exclusive travel membership offers the perfect solution for avid travelers who seek to experience the world without breaking the bank. With our carefully curated travel subscription, you can enjoy unparalleled access to a wide range of benefits designed to make your journeys more exciting, convenient, and affordable.
+                                        Are you passionate about exploring new destinations, discovering hidden gems,
+                                        and creating unforgettable memories? Our exclusive travel
+                                        {isTablet && !showMore ? (
+                                            <span className="dots">...</span>
+                                        ) : null}
+                                        {(!isTablet || showMore) && (
+                                            <span className="more">
+                                                {' '}
+                                                membership offers
+                                                the perfect solution for avid travelers who seek to experience the world without
+                                                breaking the bank. With our carefully curated travel subscription, you can enjoy
+                                                unparalleled access to a wide range of benefits designed to make your journeys
+                                                more exciting, convenient, and affordable.
+                                            </span>
+                                        )}
+                                        {isTablet && (
+                                            <button onClick={toggleReadMore} id="myBtn" className="btn-more">
+                                                {showMore ? 'Read less' : 'Read more'}
+                                            </button>
+                                        )}
                                     </p>
                                 </div>
                             </div>
@@ -584,7 +618,7 @@ const Members = () => {
                 </div>
 
             </section>
-           
+
 
 
         </div>

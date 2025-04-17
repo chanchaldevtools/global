@@ -1,7 +1,25 @@
-import React from 'react'
+import { useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const About = () => {
+
+  const [showMore, setShowMore] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  const toggleReadMore = () => setShowMore(prev => !prev);
+
+  // Detect tablet screen size on resize
+  useEffect(() => {
+    const checkTablet = () => {
+      setIsTablet(window.innerWidth >= 768 && window.innerWidth <= 1024);
+    };
+
+    checkTablet();
+    window.addEventListener('resize', checkTablet);
+    return () => window.removeEventListener('resize', checkTablet);
+  }, []);
+
   return (
     <>
       <div className="header_absolute cover-background ds s-overlay s-parallax">
@@ -26,7 +44,7 @@ const About = () => {
           <div className="container">
             <div className="about_sec1_div_2">
               <div className="row align-items-center">
-              <div className="col-lg-6 col-md-6 col-12">
+                <div className="col-lg-6 col-md-6 col-12">
                   <div className="about_sec1_div_4">
                     <img
                       src="/images/nkimg/about-img-1.jpeg"
@@ -45,7 +63,7 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-               
+
               </div>
             </div>
           </div>
@@ -69,19 +87,30 @@ const About = () => {
                   <div className="about_sec1_div_3">
                     <p className="about_sec1_p_2">Why Did We Create O2 Global?</p>
                     <p className="about_sec1_p_1">
-                      When asked why Roger and Tracy started O2 Global Inc, Roger
-                      replied, "I have been blessed with the ability to foresee and
-                      navigate market trends in the ever changing economy,
-                      ultimately creating multiple streams of income. In searching
-                      for the perfect balance in a company, I continue to create
-                      products and services that could create an equitable and
-                      profitable incentive plan for acquiring customers and teaching
-                      others to do the same. When seeing the current business
-                      landscape and understanding what it takes to succeed in
-                      today’s business climate, the desire of the executive
-                      management team is to continue to provide the ability to
-                      improve lives around the world, not only financially, but also
-                      through lifestyle, relationships, and emotional development.”
+                      When asked why Roger and Tracy started O2 Global Inc, Roger replied,
+                      "I have been blessed with the ability to foresee and navigate market trends
+                      in the ever changing economy, ultimately creating multiple streams of income.
+                      In searching for the perfect balance in a company, I continue to create products
+                      and services that could create an equitable and profitable
+                      {isTablet && !showMore ? (
+                        <span className="dots">...</span>
+                      ) : null}
+                      {(!isTablet || showMore) && (
+                        <span className="more">
+                          {' '}
+                          incentive plan for acquiring customers and teaching others to do the same.
+                          When seeing the current business landscape and understanding what it takes
+                          to succeed in today’s business climate, the desire of the executive management
+                          team is to continue to provide the ability to improve lives around the world,
+                          not only financially, but also through lifestyle, relationships, and emotional
+                          development.”
+                        </span>
+                      )}
+                      {isTablet && (
+                        <button onClick={toggleReadMore} id="myBtn" className="btn-more">
+                          {showMore ? 'Read less' : 'Read more'}
+                        </button>
+                      )}
                     </p>
                   </div>
                 </div>
@@ -166,23 +195,35 @@ const About = () => {
                       building a successful team, which eventually disbanded
                       following the collapse of the company they worked for.
                       Following this setback, Roger spent the next two decades
-                      consulting for numerous network marketing companies, striving
-                      to recreate the success he once enjoyed. Realizing that the
-                      key to finding success was to create it himself, Roger took
-                      the initiative to establish his own path. A passionate and
-                      driven professional, Roger attributes his achievements to his
-                      core values and upbringing. His true fulfillment comes from
-                      helping others achieve their dreams, aligning his career with
-                      his calling to improve lives. Roger's expertise in direct
-                      marketing encompasses everything from conception to launch
-                      planning, bonus plan development and implementation, marketing
-                      strategies, training systems, team building, product
-                      development, organizational launch and pre-launch structure
-                      and management, to conventions, seminars, set and stage
-                      design, and recognition systems. Roger’s dedication to his
-                      profession and commitment to others underscores his passion
-                      for transforming lives through innovative and effective
-                      marketing strategies.
+                      {isTablet && !showMore ? (
+                        <span className="dots">...</span>
+                      ) : null}
+                      {(!isTablet || showMore) && (
+                        <span className="more">
+                          {' '}
+                          consulting for numerous network marketing companies, striving
+                          to recreate the success he once enjoyed. Realizing that the
+                          key to finding success was to create it himself, Roger took
+                          the initiative to establish his own path. A passionate and
+                          driven professional, Roger attributes his achievements to his
+                          core values and upbringing. His true fulfillment comes from
+                          helping others achieve their dreams, aligning his career with
+                          his calling to improve lives. Roger's expertise in direct
+                          marketing encompasses everything from conception to launch
+                          planning, bonus plan development and implementation, marketing
+                          strategies, training systems, team building, product
+                          development, organizational launch and pre-launch structure
+                          and management, to conventions, seminars, set and stage
+                          design, and recognition systems. Roger’s dedication to his
+                          profession and commitment to others underscores his passion
+                          for transforming lives through innovative and effective
+                          marketing strategies. </span>
+                      )}
+                      {isTablet && (
+                        <button onClick={toggleReadMore} id="myBtn" className="btn-more">
+                          {showMore ? 'Read less' : 'Read more'}
+                        </button>
+                      )}
                     </p>
                   </div>
                 </div>
@@ -197,7 +238,7 @@ const About = () => {
                 <div className="col-lg-5 col-md-5 col-12">
                   <div className="about_sec1_div_13">
                     <p className="about_sec1_p_7 text-center">
-                    Jillian Corley
+                      Jillian Corley
                       <br />
                       President
                     </p>
@@ -209,8 +250,8 @@ const About = () => {
                 </div>
                 <div className="col-lg-7 col-md-7 col-12">
                   <div className="about_sec1_div_13">
-                  <p className="about_sec1_p_8">
-                      
+                    <p className="about_sec1_p_8">
+
                       Jillian, a visionary leader with an impressive 25-year
                       executive career, has consistently achieved extraordinary
                       success in the cooperative network marketing industry. Her
@@ -218,28 +259,41 @@ const About = () => {
                       multi-million and billion-dollar enterprises has solidified
                       her reputation as a transformative force in the business
                       world. Jillian has a proven track record of driving
-                      exponential growth, increasing market share, and
-                      establishing industry-leading brands. Her strategic vision,
-                      coupled with her keen ability to identify and capitalize on
-                      emerging opportunities, has resulted in numerous
-                      groundbreaking initiatives and product launches. Jillian’s
-                      inspiring leadership style fosters a culture of innovation,
-                      teamwork, and excellence, empowering her teams to
-                      consistently surpass expectations and deliver exceptional
-                      results.
-                      <br />
-                      
-                        "At O2 Global we are driven by a shared vision of
-                        excellence and an unwavering commitment to delivering the
-                        highest quality in everything we do. Our goal is not only
-                        to achieve remarkable accomplishments as a company but
-                        also to positively impact the lives of our members,
-                        creating a legacy of success, cherished memories and
-                        lasting relationships."
-                      
-                      – Jillian Corle
-                    
-                  </p>
+                      exponential growth,
+                      {isTablet && !showMore ? (
+                        <span className="dots">...</span>
+                      ) : null}
+                      {(!isTablet || showMore) && (
+                        <span className="more">
+                          {' '}
+                          increasing market share, and
+                          establishing industry-leading brands. Her strategic vision,
+                          coupled with her keen ability to identify and capitalize on
+                          emerging opportunities, has resulted in numerous
+                          groundbreaking initiatives and product launches. Jillian’s
+                          inspiring leadership style fosters a culture of innovation,
+                          teamwork, and excellence, empowering her teams to
+                          consistently surpass expectations and deliver exceptional
+                          results.
+                          <br />
+
+                          "At O2 Global we are driven by a shared vision of
+                          excellence and an unwavering commitment to delivering the
+                          highest quality in everything we do. Our goal is not only
+                          to achieve remarkable accomplishments as a company but
+                          also to positively impact the lives of our members,
+                          creating a legacy of success, cherished memories and
+                          lasting relationships."
+
+                          – Jillian Corle
+                        </span>
+                      )}
+                      {isTablet && (
+                        <button onClick={toggleReadMore} id="myBtn" className="btn-more">
+                          {showMore ? 'Read less' : 'Read more'}
+                        </button>
+                      )}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -264,7 +318,18 @@ const About = () => {
                 <div className="col-lg-7 col-md-7 col-12">
                   <div className="about_sec1_div_13">
                     <p className="about_sec1_p_8">
-                      Scott, has a well versed background that is rich in events and hospitality, I am currently working with O2 Global on their Product Development. My experience of almost 10 years includes specialized event planning, and organizing curated global trips, ensuring exceptional experiences for international corporate clients. My experience also includes roles in managing corporate and leisure travel, conferences, and events. With a strong foundation in customer service and sales, I have overseen operations, client services, and business development in managerial positions. Throughout my career, my dedication to creating memorable experiences and delivering top-notch customer service has been unwavering. I am enthusiastic about utilizing my skills and knowledge to achieve excellent outcomes in all future endeavors.
+                      Scott, has a well versed background that is rich in events and hospitality, 
+                      I am currently working with O2 Global on their Product Development.
+                      My experience of almost 10 years includes specialized event planning, 
+                      and organizing curated global trips, ensuring exceptional experiences for 
+                      international corporate clients. My experience also includes roles in managing
+                       corporate and leisure travel, conferences, and events. With a strong foundation
+                        in customer 
+                         service and sales, I have overseen operations, client services, 
+                        and business development in managerial positions. Throughout my career, 
+                        my dedication to creating memorable experiences and delivering top-notch 
+                        customer service has been unwavering. I am enthusiastic about utilizing my skills 
+                        and knowledge to achieve excellent outcomes in all future endeavors.
                     </p>
                   </div>
                 </div>

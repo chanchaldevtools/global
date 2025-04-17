@@ -93,6 +93,9 @@ const Header = () => {
                                     <li>
                                         <Link to="/about-us" onClick={() => setMenuOpen(false)}>About Us</Link>
                                     </li>
+                                    <li>
+                                        <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+                                    </li>
                                 </ul>
                                 <ul className="nav new-nav joinus_login m-0">
 									<li className="text-center p-0 border_right">

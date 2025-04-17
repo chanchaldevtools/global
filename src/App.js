@@ -1,4 +1,4 @@
-import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./component/AppLayout";
 import Home from "./page/Home";
 import Members from "./page/Members";
@@ -11,6 +11,7 @@ import Social from "./page/Social";
 import Terms from "./page/Terms";
 import Privacy from "./page/Privacy";
 import NotFound from "./page/Notfound";
+import Blog from "./page/Blog";
 
 
 
@@ -50,6 +51,10 @@ function App() {
           element: <Contact/>,
         },
         {
+          path: "/blog",
+          element: <Blog/>,
+        },
+        {
           path: "/social-media",
           element: <Social/>,
         },
@@ -66,7 +71,7 @@ function App() {
           element: <NotFound/>,
         }
         
-        
+      
       ],
     },
   ]);

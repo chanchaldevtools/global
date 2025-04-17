@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const Events = () => {
+
+    const [showMore, setShowMore] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
+  
+    const toggleReadMore = () => setShowMore(prev => !prev);
+  
+    // Detect tablet screen size on resize
+    useEffect(() => {
+      const checkTablet = () => {
+        setIsTablet(window.innerWidth >= 768 && window.innerWidth <= 1024);
+      };
+  
+      checkTablet();
+      window.addEventListener('resize', checkTablet);
+      return () => window.removeEventListener('resize', checkTablet);
+    }, []);
+
+
   return (
     <>
     <div className="header_absolute cover-background ds s-overlay s-parallax">
@@ -47,7 +66,14 @@ const Events = () => {
                       At O2 Global, we are committed to supporting our Affiliate
                       community by utilizing cutting-edge technology platforms,
                       however, while technology has significantly enhanced our
-                      ability to network and promote our business, research
+                      ability to
+                      {isTablet && !showMore ? (
+                        <span className="dots">...</span>
+                      ) : null}
+                      {(!isTablet || showMore) && (
+                        <span className="more">
+                          {' '}
+                       network and promote our business, research
                       consistently demonstrates a continued need and desire for
                       direct human interaction. Therefore, we offer a variety of
                       live, in-person events designed to foster connection and
@@ -55,6 +81,13 @@ const Events = () => {
                       you to host one of these educational and enjoyable events
                       within your own community, further enriching the collective
                       experience and strengthening our network.
+                      </span>
+                      )}
+                      {isTablet && (
+                        <button onClick={toggleReadMore} id="myBtn" className="btn-more">
+                          {showMore ? 'Read less' : 'Read more'}
+                        </button>
+                      )}
                     </p>
                   </div>
                 </div>
