@@ -12,6 +12,7 @@ import Terms from "./page/Terms";
 import Privacy from "./page/Privacy";
 import NotFound from "./page/Notfound";
 import Blog from "./page/Blog";
+import BlogDetails from "./page/BlogDetails";
 
 
 
@@ -53,6 +54,10 @@ function App() {
         {
           path: "/blog",
           element: <Blog/>,
+        },
+        {
+          path: "/blog-details",
+          element: <BlogDetails/>,
         },
         {
           path: "/social-media",
