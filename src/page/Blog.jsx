@@ -10,7 +10,7 @@ function Blog() {
     useEffect(() => {
         setMenuOpen(false);
     }, [location.pathname]);
-
+    
     return (
         <div>
             <section className='blog-carousel'>
@@ -130,31 +130,31 @@ function Blog() {
                                             </div>
                                             <div class="blog_single">
                                                 <img src="/images/blog/blog2.jpeg" alt="Avatar" class="image" />
-                                                <div class="overlay bottom"><Link to="/">Blog Can Be Everything Nowadays</Link></div>
+                                                <div class="overlay bottom"><Link to="/blog-details" onClick={() => setMenuOpen(false)}>Blog Can Be Everything Nowadays</Link></div>
                                             </div>
                                         </div>
                                         <div className='col-md-2 gallery-grid'>
                                             <div class="blog_single">
                                                 <img src="/images/blog/blog3.jpeg" alt="Avatar" class="image" />
-                                                <div class="overlay middle"><Link to="/">Gutenberg doesn't change how WordPress works</Link></div>
+                                                <div class="overlay middle"><Link to="/blog-details" onClick={() => setMenuOpen(false)}>Gutenberg doesn't change how WordPress works</Link></div>
                                             </div>
                                             <div class="blog_single">
                                                 <img src="/images/blog/blog4.jpg" alt="Avatar" class="image" />
-                                                <div class="overlay middle"><Link to="/">Design an Amazing Blog WP Site</Link></div>
+                                                <div class="overlay middle"><Link to="/blog-details" onClick={() => setMenuOpen(false)}>Design an Amazing Blog WP Site</Link></div>
                                             </div>
                                             <div class="blog_single">
                                                 <img src="/images/blog/blog5.jpeg" alt="Avatar" class="image" />
-                                                <div class="overlay middle"><Link to="/">WordCamp Europe Opens the Call for Host City 2020</Link></div>
+                                                <div class="overlay middle"><Link to="/blog-details" onClick={() => setMenuOpen(false)}>WordCamp Europe Opens the Call for Host City 2020</Link></div>
                                             </div>
                                         </div>
                                         <div className='col-md-5 gallery-grid grid-right'>
                                             <div class="blog_single">
                                                 <img src="/images/blog/blog7.jpg" alt="Avatar" class="image" />
-                                                <div class="overlay"><Link to="/">The editor does not represent the core of WordPress publishing,</Link></div>
+                                                <div class="overlay"><Link to="/blog-details" onClick={() => setMenuOpen(false)}>The editor does not represent the core of WordPress publishing,</Link></div>
                                             </div>
                                             <div class="blog_single">
                                                 <img src="/images/blog/blog6.jpeg" alt="Avatar" class="image" />
-                                                <div class="overlay bottom"><Link to="/">Three responses to a piece of design</Link></div>
+                                                <div class="overlay bottom"><Link to="/blog-details" onClick={() => setMenuOpen(false)}>Three responses to a piece of design</Link></div>
                                             </div>
                                         </div>
                                     </div>
@@ -173,23 +173,23 @@ function Blog() {
                                         <div className='col-md-5 gallery-grid'>
                                             <div class="blog_single">
                                                 <img src="/images/blog/blog1.jpeg" alt="Avatar" class="image" />
-                                                <div class="overlay"><Link to="/">My Name is John</Link></div>
+                                                <div class="overlay"><Link to="/blog-details" onClick={() => setMenuOpen(false)}>My Name is John</Link></div>
                                             </div>
                                             <div class="blog_single">
                                                 <img src="/images/blog/blog2.jpeg" alt="Avatar" class="image" />
-                                                <div class="overlay bottom"><Link to="/">Blog Can Be Everything Nowadays</Link></div>
+                                                <div class="overlay bottom"><Link to="/blog-details" onClick={() => setMenuOpen(false)}>Blog Can Be Everything Nowadays</Link></div>
                                             </div>
                                         </div>
                                         <div className='col-md-2 gallery-grid'>
                                             <div class="blog_single">
                                                 <img src="/images/blog/blog3.jpeg" alt="Avatar" class="image" />
-                                                <div class="overlay middle"><Link to="/">Gutenberg doesn't change how WordPress works</Link></div>
+                                                <div class="overlay middle"><Link to="/blog-details" onClick={() => setMenuOpen(false)}>Gutenberg doesn't change how WordPress works</Link></div>
                                             </div>
                                         </div>
                                         <div className='col-md-5 gallery-grid grid-right'>
                                             <div class="blog_single">
                                                 <img src="/images/blog/blog7.jpg" alt="Avatar" class="image" />
-                                                <div class="overlay"><Link to="/">The editor does not represent the core of WordPress publishing,</Link></div>
+                                                <div class="overlay"><Link to="/blog-details" onClick={() => setMenuOpen(false)}>The editor does not represent the core of WordPress publishing,</Link></div>
                                             </div>
                                         </div>
                                     </div>
