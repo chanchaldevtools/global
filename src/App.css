@@ -869,7 +869,9 @@ a.dropdown-item.copy p {
     padding-bottom: 5px;
     margin-top: 10px;
   }
-
+  ul.blog-list {
+    padding-left: 14px;
+}
   .page_slider .home_slider .intro_layers h2 {
     margin-top: 75px;
   }
